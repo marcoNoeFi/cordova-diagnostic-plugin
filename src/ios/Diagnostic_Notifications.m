@@ -227,7 +227,7 @@ static NSString*const REMOTE_NOTIFICATIONS_BADGE = @"badge";
 {
     @try {
         if (@available(iOS 15.4, *)) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenNotificationSettingsURLString] options:@{} completionHandler:^(BOOL success) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplication.openNotificationSettingsURLString] options:@{} completionHandler:^(BOOL success) {
                 if (success) {
                     [diagnostic sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] :command];
                 }else{
